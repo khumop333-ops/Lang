@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crash Site — Pretoria Backyard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stage-wrap">
+    <div class="stage" id="stage" aria-label="Animated crash scene">
+      <svg class="scene" viewBox="0 0 540 960" xmlns="http://www.w3.org/2000/svg" role="img">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#7ec8f5"/>
+            <stop offset="55%" stop-color="#b8e4ff"/>
+            <stop offset="100%" stop-color="#e8f6ff"/>
+          </linearGradient>
+          <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="18%" stop-color="#cfd8e3"/>
+            <stop offset="40%" stop-color="#8a97a8"/>
+            <stop offset="58%" stop-color="#eef3f8"/>
+            <stop offset="78%" stop-color="#6b7787"/>
+            <stop offset="100%" stop-color="#d9e2ec"/>
+          </linearGradient>
+          <radialGradient id="chromeShine" cx="35%" cy="28%" r="55%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+            <stop offset="35%" stop-color="#ffffff" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="brick" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#c26b4a"/>
+            <stop offset="100%" stop-color="#9a4a32"/>
+          </linearGradient>
+          <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#7ec24a"/>
+            <stop offset="100%" stop-color="#4a9a32"/>
+          </linearGradient>
+          <linearGradient id="houseWall" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#f3e3c4"/>
+            <stop offset="100%" stop-color="#e8d4a8"/>
+          </linearGradient>
+          <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#2a4a1a" flood-opacity="0.35"/>
+          </filter>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <clipPath id="podClip">
+            <ellipse cx="270" cy="620" rx="148" ry="188"/>
+          </clipPath>
+        </defs>
+
+        <!-- SKY -->
+        <rect width="540" height="960" fill="url(#sky)"/>
+        <g class="clouds">
+          <ellipse cx="90" cy="90" rx="70" ry="28" fill="#fff" opacity="0.9"/>
+          <ellipse cx="140" cy="95" rx="50" ry="22" fill="#fff" opacity="0.85"/>
+          <ellipse cx="400" cy="70" rx="80" ry="26" fill="#fff" opacity="0.88"/>
+          <ellipse cx="460" cy="78" rx="48" ry="20" fill="#fff" opacity="0.8"/>
+        </g>
+
+        <!-- Distant trees / neighbor roofs -->
+        <g class="distance">
+          <rect x="70" y="268" width="90" height="70" fill="#d8c4a8"/>
+          <polygon points="65,268 115,228 165,268" fill="#8b4a32"/>
+          <rect x="380" y="250" width="110" height="90" fill="#cfc0a0"/>
+          <polygon points="375,250 435,205 495,250" fill="#7a3e28"/>
+          <ellipse cx="40" cy="300" rx="55" ry="70" fill="#3d8a3a"/>
+          <ellipse cx="500" cy="290" rx="70" ry="85" fill="#357a34"/>
+          <ellipse cx="250" cy="285" rx="80" ry="60" fill="#2f6e30"/>
+        </g>
+
+        <!-- Wooden fence -->
+        <g class="fence">
+          <rect x="0" y="320" width="540" height="18" fill="#8b5a2b"/>
+          <g fill="#a06a38" stroke="#6e4320" stroke-width="2">
+            <rect x="8" y="338" width="28" height="130" rx="2"/>
+            <rect x="44" y="338" width="28" height="130" rx="2"/>
+            <rect x="80" y="338" width="28" height="130" rx="2"/>
+            <rect x="116" y="338" width="28" height="130" rx="2"/>
+            <rect x="152" y="338" width="28" height="130" rx="2"/>
+            <rect x="188" y="338" width="28" height="130" rx="2"/>
+            <rect x="224" y="338" width="28" height="130" rx="2"/>
+            <rect x="260" y="338" width="28" height="130" rx="2"/>
+            <rect x="296" y="338" width="28" height="130" rx="2"/>
+            <rect x="332" y="338" width="28" height="130" rx="2"/>
+            <rect x="368" y="338" width="28" height="130" rx="2"/>
+            <rect x="404" y="338" width="28" height="130" rx="2"/>
+            <rect x="440" y="338" width="28" height="130" rx="2"/>
+            <rect x="476" y="338" width="28" height="130" rx="2"/>
+            <rect x="512" y="338" width="28" height="130" rx="2"/>
+          </g>
+          <rect x="0" y="390" width="540" height="12" fill="#8b5a2b"/>
+        </g>
+
+        <!-- Bushes along fence -->
+        <g class="bushes">
+          <ellipse cx="60" cy="470" rx="50" ry="28" fill="#3f8f38"/>
+          <ellipse cx="110" cy="478" rx="40" ry="22" fill="#347a30"/>
+          <ellipse cx="430" cy="472" rx="55" ry="30" fill="#3f8f38"/>
+          <ellipse cx="490" cy="480" rx="42" ry="24" fill="#2f6e2c"/>
+        </g>
+
+        <!-- Lawn -->
+        <rect x="0" y="478" width="540" height="482" fill="url(#lawn)"/>
+        <g opacity="0.18" fill="#2d6a22">
+          <ellipse cx="80" cy="720" rx="90" ry="18"/>
+          <ellipse cx="400" cy="800" rx="110" ry="22"/>
+          <ellipse cx="250" cy="880" rx="140" ry="20"/>
+        </g>
+
+        <!-- House left -->
+        <g class="house">
+          <rect x="0" y="210" width="150" height="280" fill="url(#houseWall)" stroke="#c4a878" stroke-width="2"/>
+          <rect x="0" y="400" width="150" height="90" fill="url(#brick)"/>
+          <!-- brick lines -->
+          <g stroke="#7a3a28" stroke-width="1" opacity="0.45">
+            <line x1="0" y1="418" x2="150" y2="418"/>
+            <line x1="0" y1="436" x2="150" y2="436"/>
+            <line x1="0" y1="454" x2="150" y2="454"/>
+            <line x1="0" y1="472" x2="150" y2="472"/>
+          </g>
+          <rect x="18" y="250" width="78" height="130" rx="4" fill="#8ec8e8" stroke="#5a7a90" stroke-width="4"/>
+          <line x1="57" y1="250" x2="57" y2="380" stroke="#5a7a90" stroke-width="3"/>
+          <line x1="18" y1="315" x2="96" y2="315" stroke="#5a7a90" stroke-width="3"/>
+          <rect x="0" y="175" width="170" height="40" fill="#6b3a28"/>
+          <polygon points="0,210 0,175 170,175 150,210" fill="#5a2e20"/>
+          <rect x="118" y="300" width="14" height="190" fill="#dce4ea" stroke="#9aa8b0"/>
+          <!-- patio -->
+          <g>
+            <rect x="0" y="488" width="175" height="140" fill="#c9c2b4"/>
+            <g stroke="#b0a898" stroke-width="1">
+              <line x1="0" y1="520" x2="175" y2="520"/>
+              <line x1="0" y1="552" x2="175" y2="552"/>
+              <line x1="0" y1="584" x2="175" y2="584"/>
+              <line x1="58" y1="488" x2="58" y2="628"/>
+              <line x1="116" y1="488" x2="116" y2="628"/>
+            </g>
+          </g>
+          <!-- hose tap -->
+          <circle cx="132" cy="478" r="7" fill="#6aa0c8" stroke="#2a4a60"/>
+          <path d="M132 478 C 150 500, 90 530, 70 545" fill="none" stroke="#2f8a3a" stroke-width="8" stroke-linecap="round"/>
+          <path class="hose-coil" d="M70 545 C 40 560, 40 590, 78 595 C 120 600, 110 560, 78 555 C 50 550, 55 585, 90 588" fill="none" stroke="#2f8a3a" stroke-width="8" stroke-linecap="round"/>
+        </g>
+
+        <!-- Big tree right -->
+        <g class="tree">
+          <rect x="455" y="430" width="36" height="160" fill="#6b3e22" stroke="#4a2814"/>
+          <ellipse cx="472" cy="360" rx="95" ry="80" fill="#2f7a32"/>
+          <ellipse cx="420" cy="390" rx="60" ry="50" fill="#3a8e38"/>
+          <ellipse cx="510" cy="380" rx="55" ry="48" fill="#277028"/>
+        </g>
+
+        <!-- Rotary washing line -->
+        <g class="line" transform="translate(390,430)">
+          <rect x="-6" y="40" width="12" height="160" fill="#6a7580" stroke="#3a444c"/>
+          <ellipse cx="0" cy="200" rx="18" ry="7" fill="#4a555c"/>
+          <g class="arms">
+            <line x1="-90" y1="40" x2="90" y2="40" stroke="#5a6570" stroke-width="4"/>
+            <line x1="-70" y1="20" x2="70" y2="60" stroke="#5a6570" stroke-width="3"/>
+            <line x1="-70" y1="60" x2="70" y2="20" stroke="#5a6570" stroke-width="3"/>
+            <circle cx="0" cy="40" r="8" fill="#3a444c"/>
+          </g>
+          <!-- laundry -->
+          <g class="laundry">
+            <g class="shirt s1">
+              <rect x="-78" y="44" width="36" height="52" rx="4" fill="#f4f4f0" stroke="#c8c8c0"/>
+            </g>
+            <g class="shirt s2">
+              <rect x="-34" y="44" width="34" height="56" rx="4" fill="#2a4a8a" stroke="#1a3060"/>
+            </g>
+            <g class="shirt s3">
+              <rect x="8" y="44" width="32" height="50" rx="4" fill="#e85a6a" stroke="#b03040"/>
+            </g>
+            <g class="shirt s4">
+              <rect x="48" y="44" width="30" height="58" rx="4" fill="#2c3a55" stroke="#1a2438"/>
+            </g>
+          </g>
+        </g>
+
+        <!-- Crushed chair pieces -->
+        <g class="wrecked-chair" filter="url(#softShadow)">
+          <path d="M145 700 L175 690 L190 740 L155 750 Z" fill="#3cb08a" stroke="#247a5e" stroke-width="2"/>
+          <path d="M200 705 L250 700 L255 735 L198 742 Z" fill="#34a07c" stroke="#247a5e" stroke-width="2"/>
+          <path d="M168 748 L175 790 L188 788 L182 748" fill="#2e9070" stroke="#1e6048"/>
+          <path d="M230 742 L248 788 L260 784 L242 740" fill="#2e9070" stroke="#1e6048"/>
+          <ellipse cx="210" cy="755" rx="55" ry="10" fill="#2a5a20" opacity="0.35"/>
+        </g>
+
+        <!-- Intact plastic chair (knocked) -->
+        <g class="chair" transform="translate(95,640) rotate(-18)">
+          <rect x="8" y="38" width="70" height="12" rx="4" fill="#3cb08a" stroke="#247a5e"/>
+          <rect x="14" y="0" width="58" height="44" rx="8" fill="#44c098" stroke="#247a5e"/>
+          <rect x="10" y="50" width="8" height="48" fill="#2e9070"/>
+          <rect x="68" y="50" width="8" height="48" fill="#2e9070"/>
+          <rect x="18" y="50" width="8" height="40" fill="#2e9070"/>
+          <rect x="60" y="50" width="8" height="40" fill="#2e9070"/>
+        </g>
+
+        <!-- Impact crater / dirt -->
+        <ellipse cx="270" cy="790" rx="170" ry="38" fill="#5a4a28" opacity="0.45"/>
+        <ellipse cx="270" cy="788" rx="140" ry="26" fill="#3a2e18" opacity="0.35"/>
+        <g class="debris">
+          <circle cx="160" cy="800" r="5" fill="#6a5a3a"/>
+          <circle cx="390" cy="810" r="6" fill="#5a4a2a"/>
+          <circle cx="120" cy="770" r="4" fill="#4a3a22"/>
+          <rect x="350" y="795" width="14" height="8" fill="#7a6a48" transform="rotate(20 357 799)"/>
+        </g>
+
+        <!-- THE POD -->
+        <g class="pod" filter="url(#softShadow)">
+          <ellipse cx="270" cy="808" rx="130" ry="22" fill="#1a3010" opacity="0.4"/>
+          <!-- egg body -->
+          <ellipse cx="270" cy="620" rx="148" ry="188" fill="url(#chrome)" stroke="#2a3340" stroke-width="4"/>
+          <!-- geodesic facets -->
+          <g clip-path="url(#podClip)" fill="none" stroke="#1a2430" stroke-width="1.4" opacity="0.55">
+            <ellipse cx="270" cy="620" rx="110" ry="188"/>
+            <ellipse cx="270" cy="620" rx="70" ry="188"/>
+            <ellipse cx="270" cy="620" rx="148" ry="140"/>
+            <ellipse cx="270" cy="620" rx="148" ry="90"/>
+            <ellipse cx="270" cy="620" rx="148" ry="40"/>
+            <line x1="122" y1="620" x2="418" y2="620"/>
+            <line x1="140" y1="520" x2="400" y2="720"/>
+            <line x1="140" y1="720" x2="400" y2="520"/>
+            <polygon points="270,432 330,500 310,600 230,600 210,500" fill="none"/>
+          </g>
+          <ellipse cx="270" cy="620" rx="148" ry="188" fill="url(#chromeShine)"/>
+          <!-- scorch / cracks -->
+          <g opacity="0.85">
+            <path d="M200 470 C 230 500, 210 540, 190 560" fill="none" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round"/>
+            <path d="M340 455 C 360 500, 350 540, 370 570" fill="none" stroke="#111" stroke-width="5"/>
+            <ellipse cx="318" cy="500" rx="28" ry="18" fill="#2a2218" opacity="0.7"/>
+            <ellipse cx="210" cy="490" rx="22" ry="14" fill="#1a140e" opacity="0.75"/>
+            <path d="M250 440 L258 470 L242 465 Z" fill="#1a1a1a"/>
+          </g>
+          <!-- hatch seam -->
+          <ellipse cx="270" cy="640" rx="42" ry="58" fill="none" stroke="#3a4450" stroke-width="3" opacity="0.7"/>
+          <circle cx="300" cy="640" r="6" fill="#88c8ff" filter="url(#glow)"/>
+          <!-- charred top -->
+          <path d="M220 455 Q270 400 330 450 Q300 430 270 435 Q240 430 220 455" fill="#1c1612" opacity="0.85"/>
+        </g>
+
+        <!-- Smoke -->
+        <g class="smoke" transform="translate(270,420)">
+          <ellipse class="puff p1" cx="0" cy="0" rx="28" ry="36" fill="#6a6a6a" opacity="0.55"/>
+          <ellipse class="puff p2" cx="18" cy="-30" rx="34" ry="40" fill="#7a7a7a" opacity="0.45"/>
+          <ellipse class="puff p3" cx="-10" cy="-60" rx="40" ry="46" fill="#8a8a8a" opacity="0.35"/>
+          <ellipse class="puff p4" cx="12" cy="-100" rx="48" ry="50" fill="#9a9a9a" opacity="0.25"/>
+          <ellipse class="puff p5" cx="-8" cy="-145" rx="42" ry="48" fill="#aaa" opacity="0.18"/>
+        </g>
+
+        <!-- Tricycle -->
+        <g class="trike" transform="translate(430,760)">
+          <circle cx="70" cy="40" r="22" fill="#222" stroke="#111" stroke-width="3"/>
+          <circle cx="70" cy="40" r="8" fill="#ccc"/>
+          <circle cx="8" cy="48" r="12" fill="#222"/>
+          <circle cx="8" cy="48" r="4" fill="#ccc"/>
+          <circle cx="38" cy="48" r="12" fill="#222"/>
+          <circle cx="38" cy="48" r="4" fill="#ccc"/>
+          <path d="M70 40 L40 20 L20 44 L8 48 M20 44 L38 48 M40 20 L28 8" fill="none" stroke="#c81e1e" stroke-width="5" stroke-linejoin="round"/>
+          <rect x="22" y="6" width="28" height="10" rx="3" fill="#1e6ad4"/>
+          <circle cx="70" cy="8" r="10" fill="#222" stroke="#c81e1e" stroke-width="3"/>
+        </g>
+
+        <!-- Title plate -->
+        <g class="caption">
+          <rect x="24" y="24" width="280" height="52" rx="8" fill="#0e1a12" opacity="0.72"/>
+          <text x="40" y="46" fill="#e8f4ff" font-family="Georgia, serif" font-size="16" letter-spacing="1">PRETORIA · BACKYARD</text>
+          <text x="40" y="64" fill="#9ad4ff" font-family="ui-sans-serif, system-ui" font-size="11" letter-spacing="2">UNSCHEDULED LANDING</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
